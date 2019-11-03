@@ -1,0 +1,20 @@
+language: java
+sudo: false
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+email:
+  recipients:
+    -xalexandrx.90@mail.ru
+  on_success: never # default: change
+  on_failure: always # default: always
+
+env:
+  global:
+    - CODECOV_TOKEN="3443b7a6-08f7-4104-a15b-8b55b4f8f164"
+
+services:
+  - postgresql
+
+before_install:
+  - psql -c 'create database tracker;' -U postgres
