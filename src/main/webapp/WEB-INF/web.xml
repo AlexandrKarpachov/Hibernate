@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
          http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
+     <!--  TO DO List -->
 	<servlet>
         <servlet-name>ItemsController</servlet-name>
         <servlet-class>ru.job4j.todo.service.ItemController</servlet-class>
@@ -20,4 +21,34 @@
         <servlet-name>StatusController</servlet-name>
         <url-pattern>/changeStatus</url-pattern>
     </servlet-mapping>
+    <!--  TO DO List end -->
+    
+    <!--  Car Store -->
+    <servlet>
+        <servlet-name>AjaxController</servlet-name>
+        <servlet-class>ru.job4j.carstore.service.AjaxController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AjaxController</servlet-name>
+        <url-pattern>/ajax</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>AddCarController</servlet-name>
+        <servlet-class>ru.job4j.carstore.service.AddCarController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCarController</servlet-name>
+        <url-pattern>/upload</url-pattern>
+    </servlet-mapping>
+    
+    <filter>
+        <filter-name>Authorization</filter-name>
+        <filter-class>ru.job4j.carstore.filters.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>Authorization</filter-name>
+        <servlet-name>*</servlet-name>
+    </filter-mapping>
+    
 </web-app>

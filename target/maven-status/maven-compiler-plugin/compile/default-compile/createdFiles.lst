@@ -1,9 +1,0 @@
-ru\job4j\todo\models\Item.class
-ru\job4j\todo\persistence\IStore.class
-ru\job4j\todo\service\StatusController.class
-ru\job4j\todo\service\IValidator.class
-ru\job4j\todo\Controller.class
-ru\job4j\todo\service\ItemController.class
-ru\job4j\todo\persistence\DBStorage.class
-ru\job4j\todo\service\Validator.class
-ru\job4j\todo\Test.class

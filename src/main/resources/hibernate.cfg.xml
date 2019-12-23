@@ -17,7 +17,13 @@
         <property name="current_session_context_class">thread</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">update</property>
+        <property name="hbm2ddl.auto">create</property>
         <mapping resource="ru/job4j/todo/models/Item.hbm.xml"/>
+        <mapping class="ru.job4j.carstore.models.Body"/>
+        <mapping class="ru.job4j.carstore.models.Engine"/>
+        <mapping class="ru.job4j.carstore.models.Car"/>
+        <mapping class="ru.job4j.carstore.models.Model"/>
+        <mapping class="ru.job4j.carstore.models.Brand"/>
+        <mapping class="ru.job4j.carstore.models.User"/>
 	</session-factory>
 </hibernate-configuration>

@@ -1,6 +1,5 @@
 package ru.job4j.todo.persistence;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
@@ -36,7 +35,7 @@ public class DBStorage implements IStore {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Item> getAll() {
-		return this.tx(session -> session.createQuery("from Item").list());
+		return this.tx(session -> session.createQuery("from Item i order by i.id").list());
 	}
 
 	@Override
